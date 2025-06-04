@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mayuri Khed | Data Analyst Portfolio</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f4f4f4;
@@ -19,17 +17,15 @@
     header {
       background-color: #1a1a1a;
       color: #fff;
-      padding: 20px;
+      padding: 30px 20px;
       text-align: center;
       animation: fadeIn 1s ease-in-out;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
+    header h1 { margin: 0; font-size: 2.2rem; }
+    header p { margin: 8px 0 0; font-size: 1.1rem; }
     section {
-      padding: 20px;
-      max-width: 900px;
+      padding: 25px 20px;
+      max-width: 960px;
       margin: auto;
       animation: slideIn 1s ease-in-out;
     }
@@ -38,7 +34,7 @@
       padding-bottom: 10px;
       margin-bottom: 20px;
     }
-    .project {
+    .project, .certification, .contact {
       background-color: #fff;
       padding: 20px;
       margin-bottom: 20px;
@@ -50,6 +46,23 @@
       border-radius: 6px;
       margin-top: 10px;
     }
+    .contact ul, .certification ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .skills span {
+      background: #007acc;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
     footer {
       background-color: #1a1a1a;
       color: #fff;
@@ -57,17 +70,8 @@
       padding: 20px;
       font-size: 0.9rem;
     }
-    a {
-      color: #007acc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    ul {
-      list-style-type: square;
-      padding-left: 20px;
-    }
+    a { color: #007acc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
     @keyframes fadeIn {
       0% { opacity: 0; }
       100% { opacity: 1; }
@@ -77,12 +81,9 @@
       100% { transform: translateY(0); opacity: 1; }
     }
     @media screen and (max-width: 600px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
-      section {
-        padding: 15px;
-      }
+      header h1 { font-size: 1.6rem; }
+      header p { font-size: 1rem; }
+      section { padding: 15px; }
     }
   </style>
 </head>
@@ -94,7 +95,18 @@
 
   <section>
     <h2>About Me</h2>
-    <p>I’m a data analyst with a background in cybersecurity and a passion for transforming complex data into actionable insights. I specialize in data cleaning, dashboarding, KPI reporting, and automation using tools like SQL, Python, Excel, and Power BI.</p>
+    <p><strong>🎯 Data Analyst | Certified Google Analytics Professional | CRM Reporting Specialist</strong></p>
+    <p><strong>A little bit about me</strong></p>
+    <p>🔍 Data Analyst with a strong foundation in cybersecurity and 3+ years of experience transforming raw datasets into actionable insights that drive strategic decisions, program performance, and operational efficiency.</p>
+    <p>I specialize in designing end-to-end data solutions — from cleaning and validating data to building interactive dashboards and reporting pipelines. My work has improved data accuracy by 95%, reduced manual processing time by 80%, and increased stakeholder engagement through clear, data-driven storytelling.</p>
+    <p>With expertise across SQL, Python, Power BI, Excel, and CRM platforms, I deliver analytical solutions that align data integrity with organizational goals. I’m passionate about process optimization, outcome measurement, and converting complex datasets into narratives that influence impact at scale.</p>
+  </section>
+
+  <section>
+    <h2>Technical Skills</h2>
+    <div class="skills">
+      <span>SQL</span><span>Python</span><span>Pandas</span><span>Power BI</span><span>Excel</span><span>Tableau</span><span>Salesforce</span><span>CaseWorthy</span><span>Data Cleaning</span><span>CRM Reporting</span><span>KPI Dashboards</span><span>ETL Pipelines</span>
+    </div>
   </section>
 
   <section>
@@ -102,17 +114,17 @@
 
     <div class="project">
       <h3><a href="https://github.com/MayuriKhed1998/Student-Behavior-Observatory-A-Detailed-Data-Analysis" target="_blank">📘 Student Behaviour Observatory</a></h3>
-      <p>Analyzed academic performance and behavioral factors using Python (Pandas, Seaborn). Discovered insights into GPA trends, alcohol consumption, and accommodation impact on student success.</p>
+      <p>Explored relationships between academic performance and behavioral/social factors. Used Python libraries (Pandas, Seaborn) to visualize trends in GPA, alcohol use, and housing. Discovered 15% GPA increase in one department and behavioral influences by accommodation type.</p>
     </div>
 
     <div class="project">
       <h3><a href="https://github.com/MayuriKhed1998/zara-sales-analysis" target="_blank">🛍️ Zara Sales Analysis</a></h3>
       <img src="https://github.com/MayuriKhed1998/zara-sales-analysis/blob/main/visuals/Zara%20Annual%20Report%20Image.png?raw=true" alt="Zara Dashboard Preview">
-      <p>Performed EDA on retail sales data using Excel. Built an interactive dashboard, identified gender trends, top-performing states, and major age group contributors.</p>
+      <p>Used Excel (Power Query, Pivot Tables) to clean, analyze, and visualize Zara retail sales. Identified top 5 sales states (40% of volume), gender-based trends (65% women), and age group distribution (18–50 = 70%). Delivered insights through an interactive dashboard.</p>
     </div>
   </section>
 
-  <section>
+  <section class="certification">
     <h2>Certifications</h2>
     <ul>
       <li><a href="https://www.analystbuilder.com/achievements/verify/1O03JZXW3D?r=8P0eiff2f2McxPNbIOciSqB6I" target="_blank">MySQL Practitioner Certificate – Analyst Builder</a></li>
@@ -123,8 +135,18 @@
     </ul>
   </section>
 
+  <section class="contact">
+    <h2>Let’s Connect</h2>
+    <ul>
+      <li>📧 Email: <a href="mailto:mayurikhed.aspirant@gmail.com">mayurikhed.aspirant@gmail.com</a></li>
+      <li>📞 Phone: +1 (551) 344-7265</li>
+      <li>🔗 <a href="https://linkedin.com/in/mayurikhed" target="_blank">LinkedIn Profile</a></li>
+      <li>📁 <a href="https://github.com/MayuriKhed1998" target="_blank">GitHub Profile</a></li>
+    </ul>
+  </section>
+
   <footer>
-    <p>📧 mayurikhed.aspirant@gmail.com | 📞 +1 (551) 344-7265 | <a href="https://linkedin.com/in/mayurikhed" target="_blank">LinkedIn</a></p>
+    <p>© 2025 Mayuri Mallikarjun Khed </p>
   </footer>
 </body>
 </html>
