@@ -8,82 +8,82 @@
     * { box-sizing: border-box; }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f4f4;
+      background: linear-gradient(to right, #f8f9fa, #eef2f5);
       margin: 0;
       padding: 0;
-      color: #333;
-      line-height: 1.6;
+      color: #2c3e50;
     }
     header {
-      background-color: #1a1a1a;
+      background: linear-gradient(120deg, #007acc, #005999);
       color: #fff;
-      padding: 30px 20px;
+      padding: 40px 20px;
       text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
       animation: fadeIn 1s ease-in-out;
     }
-    header h1 { margin: 0; font-size: 2.2rem; }
-    header p { margin: 8px 0 0; font-size: 1.1rem; }
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      animation: fadeIn 1.2s ease-in-out;
+    }
     section {
-      padding: 25px 20px;
+      padding: 30px 20px;
       max-width: 960px;
       margin: auto;
       animation: slideIn 1s ease-in-out;
     }
     h2 {
+      color: #007acc;
       border-bottom: 2px solid #ccc;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
+      padding-bottom: 8px;
+      margin-bottom: 25px;
     }
     .project, .certification, .contact {
-      background-color: #fff;
+      background-color: #ffffff;
       padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
     .project img {
       max-width: 100%;
       border-radius: 6px;
       margin-top: 10px;
     }
-    .contact ul, .certification ul {
-      list-style-type: square;
+    .contact ul, .certification ul, .project ul, .skills ul {
+      list-style-type: disc;
       padding-left: 20px;
+      line-height: 1.7;
     }
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 10px;
-    }
-    .skills span {
-      background: #007acc;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 6px;
-      font-size: 0.9rem;
-    }
-    footer {
-      background-color: #1a1a1a;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
+    .skills ul li strong {
+      display: inline-block;
+      width: 180px;
+      color: #2c3e50;
     }
     a { color: #007acc; text-decoration: none; }
     a:hover { text-decoration: underline; }
+    footer {
+      background-color: #005999;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.95rem;
+    }
     @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
     @keyframes slideIn {
-      0% { transform: translateY(20px); opacity: 0; }
-      100% { transform: translateY(0); opacity: 1; }
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
     @media screen and (max-width: 600px) {
-      header h1 { font-size: 1.6rem; }
+      header h1 { font-size: 1.8rem; }
       header p { font-size: 1rem; }
-      section { padding: 15px; }
+      section { padding: 20px; }
     }
   </style>
 </head>
@@ -109,88 +109,75 @@
     </ul>
   </section>
 
-  <section>
-  <h2>Technical Skills</h2>
-  <ul>
-    <li><strong>ETL Tools:</strong> SQL (MySQL, SQL Server), Snowflake, Power Query, Alteryx</li>
-    <li><strong>Data Pipelines:</strong> Power BI Dataflows, Excel VBA Automation, Batch Processing</li>
-    <li><strong>Programming:</strong> Python (Pandas, NumPy), R (basic), Shell Scripting (introductory)</li>
-    <li><strong>Data Warehousing:</strong> Snowflake, Redshift (basic), Star Schema (conceptual understanding)</li>
-    <li><strong>CRM & Data Tools:</strong> Salesforce (Apex, SOQL, Data Modeling), CaseWorthy</li>
-  </ul>
-</section>
+  <section class="skills">
+    <h2>Technical Skills</h2>
+    <ul>
+      <li><strong>ETL Tools:</strong> SQL (MySQL, SQL Server), Snowflake, Power Query, Alteryx</li>
+      <li><strong>Data Pipelines:</strong> Power BI Dataflows, Excel VBA Automation, Batch Processing</li>
+      <li><strong>Programming:</strong> Python (Pandas, NumPy), R (basic), Shell Scripting (introductory)</li>
+      <li><strong>Data Warehousing:</strong> Snowflake, Redshift (basic), Star Schema (conceptual understanding)</li>
+      <li><strong>CRM & Data Tools:</strong> Salesforce (Apex, SOQL, Data Modeling), CaseWorthy</li>
+    </ul>
+  </section>
 
   <section>
-    <h2>Projects</h2>
+    <h2>Professional Experience</h2>
 
     <div class="project">
-      <h3><a href="https://github.com/MayuriKhed1998/Student-Behavior-Observatory-A-Detailed-Data-Analysis" target="_blank">📘 Student Behaviour Observatory</a></h3>
-      <p>Explored relationships between academic performance and behavioral/social factors. Used Python libraries (Pandas, Seaborn) to visualize trends in GPA, alcohol use, and housing. Discovered 15% GPA increase in one department and behavioral influences by accommodation type.</p>
+      <h3>The Fortune Society, New York, USA <span style="float:right">Sept 2024 – Present</span></h3>
+      <p><strong>Data Analyst</strong></p>
+      <ul>
+        <li>Led cross-program analytics to inform executive strategy and funder reporting.</li>
+        <li>Managed 1,000+ CRM records, increasing accuracy by 30% using Salesforce and Excel.</li>
+        <li>Developed Power BI dashboards to track 50+ KPIs and enhance data-driven decisions.</li>
+        <li>Executed SQL and Python churn analyses, boosting retention by 12%.</li>
+        <li>Designed A/B tests to optimize outreach, increasing engagement by 15%.</li>
+        <li>Built anomaly detection models in Python and SQL to raise data accuracy by 25%.</li>
+        <li>Defined KPIs for 3 strategic initiatives and created SOPs for data validation and QA.</li>
+      </ul>
     </div>
 
     <div class="project">
-      <h3><a href="https://github.com/MayuriKhed1998/zara-sales-analysis" target="_blank">🛍️ Zara Sales Analysis</a></h3>
-      <img src="https://github.com/MayuriKhed1998/zara-sales-analysis/blob/main/visuals/Zara%20Annual%20Report%20Image.png?raw=true" alt="Zara Dashboard Preview">
-      <p>Used Excel (Power Query, Pivot Tables) to clean, analyze, and visualize Zara retail sales. Identified top 5 sales states (40% of volume), gender-based trends (65% women), and age group distribution (18–50 = 70%). Delivered insights through an interactive dashboard.</p>
+      <h3>Harlem Children’s Zone, New York, USA <span style="float:right">Dec 2023 – Sept 2024</span></h3>
+      <p><strong>Data Aide</strong></p>
+      <ul>
+        <li>Resolved 20+ daily data quality issues, boosting database accuracy and reporting reliability.</li>
+        <li>Implemented Excel and SQL validations, fixing 1,000+ monthly data errors.</li>
+        <li>Increased data accuracy by 20%, supporting stakeholder decision-making.</li>
+      </ul>
     </div>
+
+    <div class="project">
+      <h3>Shoptaki, New York, USA <span style="float:right">Sept 2023 – Nov 2023</span></h3>
+      <p><strong>Data Analyst Intern</strong></p>
+      <ul>
+        <li>Performed cross-validation using Power BI to improve data integrity.</li>
+        <li>Built SQL-based ETL pipelines, enhancing customer data accuracy by 90%.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>Birlasoft Ltd, Pune, India <span style="float:right">Nov 2020 – Jul 2022</span></h3>
+      <p><strong>Technical Analyst</strong></p>
+      <ul>
+        <li>Analyzed user behavior data via Python and Databricks with 81% higher accuracy.</li>
+        <li>Created executive dashboards in Excel to improve service delivery by 81%.</li>
+        <li>Built SQL queries to resolve data anomalies and reduce reporting time.</li>
+      </ul>
+    </div>
+  </section>
+
   <section>
-  <h2>Professional Experience</h2>
-
-  <div class="project">
-    <h3>The Fortune Society, New York, USA <span style="float:right">Sept 2024 – Present</span></h3>
-    <p><strong>Data Analyst</strong></p>
-    <ul>
-      <li>Led cross-program analytics to inform executive strategy and funder reporting.</li>
-      <li>Managed 1,000+ CRM records, increasing accuracy by 30% using Salesforce and Excel.</li>
-      <li>Developed Power BI dashboards to track 50+ KPIs and enhance data-driven decisions.</li>
-      <li>Executed SQL and Python churn analyses, boosting retention by 12%.</li>
-      <li>Designed A/B tests to optimize outreach, increasing engagement by 15%.</li>
-      <li>Built anomaly detection models in Python and SQL to raise data accuracy by 25%.</li>
-      <li>Defined KPIs for 3 strategic initiatives and created SOPs for data validation and QA.</li>
-    </ul>
-  </div>
-
-  <div class="project">
-    <h3>Harlem Children’s Zone, New York, USA <span style="float:right">Dec 2023 – Sept 2024</span></h3>
-    <p><strong>Data Aide</strong></p>
-    <ul>
-      <li>Resolved 20+ daily data quality issues, boosting database accuracy and reporting reliability.</li>
-      <li>Implemented Excel and SQL validations, fixing 1,000+ monthly data errors.</li>
-      <li>Increased data accuracy by 20%, supporting stakeholder decision-making.</li>
-    </ul>
-  </div>
-
-  <div class="project">
-    <h3>Shoptaki, New York, USA <span style="float:right">Sept 2023 – Nov 2023</span></h3>
-    <p><strong>Data Analyst Intern</strong></p>
-    <ul>
-      <li>Performed cross-validation using Power BI to improve data integrity.</li>
-      <li>Built SQL-based ETL pipelines, enhancing customer data accuracy by 90%.</li>
-    </ul>
-  </div>
-
-  <div class="project">
-    <h3>Birlasoft Ltd, Pune, India <span style="float:right">Nov 2020 – Jul 2022</span></h3>
-    <p><strong>Technical Analyst</strong></p>
-    <ul>
-      <li>Analyzed user behavior data via Python and Databricks with 81% higher accuracy.</li>
-      <li>Created executive dashboards in Excel to improve service delivery by 81%.</li>
-      <li>Built SQL queries to resolve data anomalies and reduce reporting time.</li>
-    </ul>
-  </div>
-</section>
-<section>
-  <h2>Education</h2>
-  <div class="project">
-    <h3>Pace University, Seidenberg School of Computer Science – New York, USA</h3>
-    <p><strong>MS in Cybersecurity</strong> (2022 – 2024)</p>
-  </div>
-  <div class="project">
-    <h3>Savitribai Phule Pune University – Pune, India</h3>
-    <p><strong>BE in Computer Science</strong> (2017 – 2020)</p>
-  </div>
-</section>
-</section>
+    <h2>Education</h2>
+    <div class="project">
+      <h3>Pace University, Seidenberg School of Computer Science – New York, USA</h3>
+      <p><strong>MS in Cybersecurity</strong> (2022 – 2024)</p>
+    </div>
+    <div class="project">
+      <h3>Savitribai Phule Pune University – Pune, India</h3>
+      <p><strong>BE in Computer Science</strong> (2017 – 2020)</p>
+    </div>
+  </section>
 
   <section class="certification">
     <h2>Certifications</h2>
@@ -214,7 +201,7 @@
   </section>
 
   <footer>
-    <p>© 2025 Mayuri Mallikarjun Khed </p>
+    <p>© 2025 Mayuri Mallikarjun Khed • Built with HTML, CSS & ❤️ on GitHub Pages</p>
   </footer>
 </body>
 </html>
