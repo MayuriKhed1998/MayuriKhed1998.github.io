@@ -85,7 +85,29 @@
       header p { font-size: 1rem; }
       section { padding: 20px; }
     }
-  </style>
+    .project {
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  }
+  .project.fade-up {
+    animation: fadeUp 0.8s ease-in-out both;
+  }
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
 </head>
 <body>
   <header>
@@ -108,7 +130,7 @@
   <section>
     <h2>Projects</h2>
 
-    <div class="project">
+    <div class="project fade-up">
       <h3>Student Behaviour Observatory</h3>
       <p><strong>Description:</strong> Explored relationships between student performance, alcohol consumption, social behavior, and parental approval using Python and Seaborn.</p>
       <p><strong>Outcome:</strong> Identified a department with 15% higher average GPA; built visualizations to detect performance trends by gender, department, and accommodation type.</p>
@@ -116,7 +138,7 @@
       <p><strong>GitHub:</strong> <a href="https://github.com/MayuriKhed1998/Student-Behavior-Observatory-A-Detailed-Data-Analysis" target="_blank">View Project</a></p>
     </div>
 
-    <div class="project">
+    <div class="project fade-up">
       <h3>Zara Sales Analysis Dashboard</h3>
       <p><strong>Description:</strong> Cleaned and processed Zara's sales dataset using Excel; built interactive dashboards to uncover patterns across gender, location, and age groups.</p>
       <p><strong>Outcome:</strong> Found 65% of sales from female shoppers, top-performing states contributing to 40% revenue, and age 18–50 being the most active group.</p>
@@ -141,23 +163,24 @@
   <section>
     <h2>Professional Experience</h2>
 
-    <div class="project">
+    <div class="project fade-up">
       <h3>The Fortune Society, New York, USA <span style="float:right">Sept 2024 – Present</span></h3>
       <p><strong>Data Analyst</strong></p>
       <ul>
-        <li>Delivered high-impact quantitative and qualitative analysis across programs, uncovering key insights into participant engagement, retention, and service outcomes—informing executive strategy and funder reporting.</li>
-        <li>Led data infrastructure optimization, managing 1,000+ CRM records and improving reporting accuracy by 30% through customized Salesforce dashboards and Excel-based reports.</li>
-        <li>Designed and deployed interactive Power BI dashboards to monitor 50+ KPIs in real-time, enabling C-level executives to make timely, data-driven decisions-boosting operational efficiency by 30%.</li>
-        <li>Conducted cohort retention and churn analysis using SQL and Python, identifying user drop-off points and increasing program retention by 12%.</li>
-        <li>Led A/B test analysis of outreach strategies, driving a 15% increase in engagement with 95% statistical confidence and supporting evidence-based decision-making.</li>
-        <li>Built anomaly detection models in Python (Scikit-learn) and SQL to detect and resolve data inconsistencies, improving data accuracy by 25%.</li>
-        <li>Partnered with Product Managers and Engineers to define success metrics and KPIs for 3 strategic initiatives, aligning analytics with business goals and securing cross-functional buy-in.</li>
-        <li>Collaborated with Data Engineers and QA teams to execute UAT and verify data quality, system compliance, and stakeholder satisfaction.</li>
-        <li>Authored detailed SOPs for data validation, reporting, and QA processes—enhancing reproducibility and reducing onboarding time by 30%.</li>
+  <li>Delivered high-impact quantitative and qualitative analysis across programs, uncovering key insights into participant engagement, retention, and service outcomes—informing executive strategy and funder reporting.</li>
+  <li>Led data infrastructure optimization, managing 1,000+ CRM records and improving reporting accuracy by 30% through customized Salesforce dashboards and Excel-based reports.</li>
+ <li>Designed and deployed interactive Power BI dashboards to monitor 50+ KPIs in real-time, enabling C-level executives to make timely, data-driven decisions-boosting operational efficiency by 30%.</li>
+<li>Conducted cohort retention and churn analysis using SQL and Python, identifying user drop-off points and increasing program retention by 12%.</li>
+ <li>Led A/B test analysis of outreach strategies, driving a 15% increase in engagement with 95% statistical confidence and supporting evidence-based decision-making.</li>
+ <li>Built anomaly detection models in Python (Scikit-learn) and SQL to detect and resolve data inconsistencies, improving data accuracy by 25%.</li>
+ <li>Partnered with Product Managers and Engineers to define success metrics and KPIs for 3 strategic initiatives, aligning analytics with business goals and securing cross-functional buy-in.</li>
+ <li>Collaborated with Data Engineers and QA teams to execute UAT and verify data quality, system compliance, and stakeholder satisfaction.</li>
+ <li>Authored detailed SOPs for data validation, reporting, and QA processes—enhancing reproducibility and reducing onboarding time by 30%.</li>
+
       </ul>
     </div>
 
-    <div class="project">
+    <div class="project fade-up">
       <h3>Harlem Children’s Zone, New York, USA <span style="float:right">Dec 2023 – Sept 2024</span></h3>
       <p><strong>Data Aide</strong></p>
       <ul>
@@ -167,7 +190,7 @@
       </ul>
     </div>
 
-    <div class="project">
+    <div class="project fade-up">
       <h3>Shoptaki, New York, USA <span style="float:right">Sept 2023 – Nov 2023</span></h3>
       <p><strong>Data Analyst Intern</strong></p>
       <ul>
@@ -176,7 +199,7 @@
       </ul>
     </div>
 
-    <div class="project">
+    <div class="project fade-up">
       <h3>Birlasoft Ltd, Pune, India <span style="float:right">Nov 2020 – Jul 2022</span></h3>
       <p><strong>Technical Analyst</strong></p>
       <ul>
@@ -189,11 +212,11 @@
 
   <section>
     <h2>Education</h2>
-    <div class="project">
+    <div class="project fade-up">
       <h3>Pace University, Seidenberg School of Computer Science – New York, USA</h3>
       <p><strong>MS in Cybersecurity</strong> (2022 – 2024)</p>
     </div>
-    <div class="project">
+    <div class="project fade-up">
       <h3>Savitribai Phule Pune University – Pune, India</h3>
       <p><strong>BE in Computer Science</strong> (2017 – 2020)</p>
     </div>
@@ -204,7 +227,7 @@
     <ul>
       <li><a href="https://www.analystbuilder.com/achievements/verify/1O03JZXW3D?r=8P0eiff2f2McxPNbIOciSqB6I" target="_blank">MySQL Practitioner Certificate – Analyst Builder</a></li>
       <li><a href="https://skillshop.credential.net/f8a67915-a944-4d88-a608-c513366755a1#acc.zTsWZLB8" target="_blank">Google Data Analytics Certification – Skillshop</a></li>
-    
+  
     </ul>
   </section>
 
@@ -214,12 +237,12 @@
       <li>📧 Email: <a href="mailto:mayurikhed.aspirant@gmail.com">mayurikhed.aspirant@gmail.com</a></li>
       <li>📞 Phone: +1 (551) 344-7265</li>
       <li>🔗 <a href="https://linkedin.com/in/mayurikhed" target="_blank">LinkedIn Profile</a></li>
-
+    
     </ul>
   </section>
 
   <footer>
-    <p>© 2025 Mayuri Mallikarjun Khed • Built with HTML, CSS on GitHub Pages</p>
+    <p>© 2025 Mayuri Mallikarjun Khed • Built with HTML & CSS </p>
   </footer>
 </body>
 </html>
